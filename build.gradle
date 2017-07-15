@@ -1,14 +1,14 @@
 buildscript {
-	project.ext {
+    project.ext {
         bootVersion = '1.4.4.RELEASE'
-		cloudVersion = '1.1.0.RELEASE'
-		seurityVersion = '2.0.8.RELEASE'
+        cloudVersion = '1.1.0.RELEASE'
+        seurityVersion = '2.0.8.RELEASE'
     }
     repositories {
         mavenCentral()
         jcenter()
     }
-    
+
     dependencies {
         classpath "org.springframework.boot:spring-boot-gradle-plugin:${project.bootVersion}"
         classpath 'se.transmode.gradle:gradle-docker:1.2'
@@ -27,15 +27,15 @@ jar {
     version =  '0.0.1'
 }
 
-repositories { 
-	mavenCentral() 
-	jcenter()
+repositories {
+    mavenCentral()
+    jcenter()
 }
 dependencies {
-    compile("org.springframework.boot:spring-boot-starter-web:${project.bootVersion}")    
+    compile("org.springframework.boot:spring-boot-starter-web:${project.bootVersion}")
     compile("org.springframework.boot:spring-boot-starter-actuator:${project.bootVersion}")
-	compile("org.springframework.cloud:spring-cloud-starter-config")
-	compile("org.springframework.cloud:spring-cloud-starter-eureka")
+    compile("org.springframework.cloud:spring-cloud-starter-config")
+    compile("org.springframework.cloud:spring-cloud-starter-eureka")
     compile("org.springframework.cloud:spring-cloud-starter-hystrix")
 
     testCompile group: 'junit', name: 'junit', version: '4.+'
