@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/products")
+@RequestMapping("/goods")
 public class ShippingController {
 
 	private SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
@@ -35,10 +35,10 @@ public class ShippingController {
 		return shippings;
 	}
 
-	@RequestMapping(value = "/{productId}", method = RequestMethod.GET, headers = "Accept=application/json")
-	public Shipping getProductbyId(@PathVariable("productId") final String productId) {
-		Optional<Shipping> product = shippings.stream().filter(c -> Objects.equals(c.getGoodsId(), productId)).findAny();
+	@RequestMapping(value = "/{goodsId}", method = RequestMethod.GET, headers = "Accept=application/json")
+	public Shipping getProductbyId(@PathVariable("goodsId") final String goodsId) {
+		Optional<Shipping> shipping = shippings.stream().filter(c -> Objects.equals(c.getGoodsId(), goodsId)).findAny();
 
-		return product.isPresent() ? product.get() : null;
+		return shipping.isPresent() ? shipping.get() : null;
 	}
 }

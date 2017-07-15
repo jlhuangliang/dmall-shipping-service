@@ -1,6 +1,6 @@
 spring:
   application:
-    warehouse: shipping-service
+    name: shipping-service
   cloud:
     config:
       uri: http://dmall-config-server:8888
