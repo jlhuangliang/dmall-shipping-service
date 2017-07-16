@@ -24,7 +24,7 @@ public class ShippingController {
 
 	public ShippingController() throws ParseException {
 		this.shippings = Arrays.asList(
-				new Shipping("g001", "北京亦庄", "北京市西城区西直门大街175号", formatter.parse("2015-04-23")),
+				new Shipping("g001", "北京朝阳门库房", "北京市西城区西直门大街175号", formatter.parse("2015-04-23")),
 				new Shipping("g002", "江西1号库", "北京市海淀区西二旗32号", formatter.parse("2015-05-12")),
 				new Shipping("g003", "北京北七家", "北京朝阳大悦城3楼231号", formatter.parse("2015-04-27")));
 	}
