@@ -3,7 +3,7 @@ version: '2'
 services:
   dmall-registry-server:
       image: dmall-docker-registry:5000/dmall/shipping-service:latest
-      mem_limit: 512m
+      mem_limit: 768m
       networks:
           - jenkins_dmall-network
       ports:
